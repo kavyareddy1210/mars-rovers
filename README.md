@@ -40,7 +40,7 @@ MMRMMRMRRM
 5 1 E
 
 # Assumptions
-This application handles validation of input file entered. It implements rspec for most of the application.
+This application also handles validation of input file entered apart from the actual application process. It implements rspec for most of the application.
 
 # Instructions to run application and tests
 After cloning repo, change directory to mars-rovers and then run
