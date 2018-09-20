@@ -54,7 +54,9 @@ Expected Output:
 # Assumptions
 This application handles validation of input file entered too apsrt from main process. It implements rspec for most of the application.
 
-Also if rover is given wrong command say 'LMLMLMK' rover navigates till 'LMLMLM',  displays the position where robot stopped and displays an error message about wrong command.   
+Also if rover is given wrong command say 'LMLMLMK' rover navigates till 'LMLMLM',  displays the position where rover stopped and displays an error message about wrong command.   
+
+Rover stops navigating when plateau boundary is reached.
 
 # Instructions to run application and tests
 After cloning repo, change directory to mars-rovers and then run
