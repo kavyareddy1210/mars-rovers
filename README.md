@@ -16,6 +16,7 @@ Assume that the square directly North from (x, y) is (x, y+1).
 It must be possible to supply input data to your application via a text file specified on the
 command line.
 
+
 INPUT​:
 
 The first line of input is the upper-right coordinates of the plateau, the lower-left coordinates
@@ -59,3 +60,4 @@ This application handles validation of input file entered too apsrt from main pr
 After cloning repo, change directory to mars-rovers and then run
 
     `ruby init.rb input.txt`
+
