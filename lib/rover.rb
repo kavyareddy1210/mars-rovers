@@ -3,15 +3,13 @@ class Rover
 
     def initialize(rover_input, mars_plateau)
         position_keys = [:x, :y, :orientation]
-        position_values = rover_input[0].gsub("\n",'').split(" ")
-        nasa_command = rover_input[1].gsub("\n", '')
+        position_values = rover_input.gsub("\n",'').split(" ")
+
         @mars_plateau = mars_plateau
         @error_messages ||= []
-
         @position = Hash[position_keys.zip(position_values)]
-        @allow_move, @error_messages  =  @mars_plateau.validate_rover_position(@position.slice(:x, :y))
 
-        navigate_rover_on_plateau(@position, nasa_command) if @allow_move
+        @allow_move, @error_messages  =  @mars_plateau.validate_rover_position(@position.slice(:x, :y))
     end
 
     def navigate_rover_on_plateau(rover_position, nasa_command)
