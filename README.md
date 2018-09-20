@@ -43,5 +43,6 @@ MMRMMRMRRM
 This application handles validation of input file entered. It implements rspec for most of the application.
 
 # Instructions to run application and tests
+After cloning repo, change directory to mars-rovers and then run
 `ruby init.rb input.txt`
 
