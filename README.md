@@ -52,7 +52,7 @@ Expected Output:
     5 1 E
 
 # Assumptions
-This application handles validation of input file entered too, apart from main process. It implements rspec for most of the application.
+This application handles validation of input file entered too, apart from main process. It implements rspec(automated tests) for most of the application.
 
 Also if rover is given wrong command say 'LMLMLMK' rover navigates till 'LMLMLM',  displays the position where rover stopped and displays an error message about wrong command.   
 
