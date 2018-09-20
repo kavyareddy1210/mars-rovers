@@ -3,9 +3,6 @@ require File.expand_path('../../lib/mars_plateau', __FILE__)
 
 describe Rover, "behaviour" do
     let (:rover_input) { "1 2 N\n" }
-    let (:expected_initial_position) { {:x => "1", :y => "2", :orientation => "N"} }
-    let (:final_navigated_position) { {:x=>"1", :y=>"3", :orientation=>"N"}}
-
 
     before :each do
         @mars_plateau = MarsPlateau.new "5 5\n"
@@ -17,7 +14,7 @@ describe Rover, "behaviour" do
     end
 
     it "Creates rovers position" do
-        expect(@rover.position).to eq expected_initial_position
+        expect(@rover.position).to include({:x => "1", :y => "2", :orientation => "N"})
     end
 
     it "validates rovers initial position and enable it to move" do
@@ -63,7 +60,7 @@ describe Rover, "behaviour" do
         end
 
         it "moves rover to [1,3,N] position on plateau" do
-            expect(@rover.position).to eq final_navigated_position
+            expect(@rover.position).to include({:x=>"1", :y=>"3", :orientation=>"N"})
         end
     end
 end

@@ -18,3 +18,4 @@ class MarsPlateau
       [@allow_move, @error_messages]
     end
   end
+  
