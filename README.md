@@ -50,7 +50,6 @@ Expected Output:
 
     1 3 N
     5 1 E
-    ==========
 
 # Assumptions
 This application handles validation of input file entered too apsrt from main process. It implements rspec for most of the application.
