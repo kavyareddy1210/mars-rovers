@@ -55,17 +55,13 @@ end
 
 begin
     line_array = File.open(ARGV[0],"r").readlines
-
-
-    test =  File.read(ARGV[0]).chars.reject!{|char| char == " " || char == "\n"}
-    puts "#{test.shift(2)}"
     puts "Error in command from input file" if (File.zero?(ARGV[0]) || line_array.size.even?)
     line_array[1..-1].each_slice(2) do |rover_cmd|
         navigate_rover(rover_cmd, line_array[0].split(" ")).map { |k, v| print v.to_s + " " }
         puts
     end
 rescue
-    puts "File cannot be opened. Please check again and input correct file" # provide way for user to input file again user gets.chomp method to enter file name and repeat tghe process
+    puts "File cannot be opened. Please check again and input correct file" 
 end
 
 

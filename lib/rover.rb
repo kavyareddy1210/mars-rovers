@@ -18,7 +18,7 @@ class Rover
         nasa_command.each_char do |cmd|
             case cmd
             when 'L', 'R'
-                @position[:orientation] = change_rover_orientation(rover_position[:orientation], cmd)
+                @position = change_rover_orientation(rover_position, cmd)
             when 'M'
                 @allow_move, @error_messages = @mars_plateau.validate_rover_position(@position.slice(:x, :y))
                 @position = change_rover_grid_position(rover_position) if @allow_move
@@ -28,20 +28,20 @@ class Rover
         end
     end
 
-    def change_rover_orientation(orientation, command)
-        case orientation
+    def change_rover_orientation(rover_position, command)
+        case rover_position[:orientation]
         when 'E'
-            orientation_next = command == 'L' ? 'N' : 'S'
+            rover_position[:orientation] = command == 'L' ? 'N' : 'S'
         when 'W'
-            orientation_next = command == 'L' ? 'S' : 'N'
+            rover_position[:orientation] = command == 'L' ? 'S' : 'N'
         when 'N'
-            orientation_next = command == 'L' ? 'W' : 'E'
+            rover_position[:orientation] = command == 'L' ? 'W' : 'E'
         when 'S'
-            orientation_next = command == 'L' ? 'E' : 'W'
+            rover_position[:orientation] = command == 'L' ? 'E' : 'W'
         else
             @error_messages << "Invalid command string"
         end
-        orientation_next
+        rover_position
     end
 
     def change_rover_grid_position(rover_position)
