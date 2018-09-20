@@ -17,6 +17,7 @@ class Explore
       rover.error_messages&.each do |msg|
         puts "#{msg}"
       end
+      rover.error_messages.clear
     end
   end
 end
