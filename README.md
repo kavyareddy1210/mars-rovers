@@ -25,13 +25,20 @@ move until the first one has finished moving.
 
 OUTPUT​:
 The output for each rover should be its final coordinates and heading.
-SAMPLE INPUT AND OUTPUT:
+# SAMPLE INPUT AND OUTPUT:
 Test Input:
 5 5
 1 2 N
 LMLMLMLMM
 3 3 E
 MMRMMRMRRM
-Expected Output:
+# Expected Output:
 1 3 N
 5 1 E
+
+# Assumptions
+This application handles validation of input file entered. It implements rspec for most of the application.
+
+# Instructions to run application and tests
+`ruby init.rb input.txt`
+

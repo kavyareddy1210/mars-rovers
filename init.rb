@@ -44,5 +44,5 @@ begin
     puts "#{format_output_to_display(pos)}"
   end
 rescue
-  puts "File cannot be opened. Please check again and input correct file"
+  puts "Input file cannot be opened. Please check again and input correct file"
 end
