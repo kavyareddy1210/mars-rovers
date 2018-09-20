@@ -9,7 +9,7 @@ class Rover
         @error_messages ||= []
 
         @position = Hash[position_keys.zip(position_values)]
-        @allow_move =  @mars_plateau.validate_rover_position(@position.slice(:x, :y))
+        @allow_move, @error_messages  =  @mars_plateau.validate_rover_position(@position.slice(:x, :y))
 
         navigate_rover_on_plateau(@position, nasa_command) if @allow_move
     end
@@ -20,7 +20,7 @@ class Rover
             when 'L', 'R'
                 @position[:orientation] = change_rover_orientation(rover_position[:orientation], cmd)
             when 'M'
-                @allow_move = @mars_plateau.validate_rover_position(@position.slice(:x, :y))
+                @allow_move, @error_messages = @mars_plateau.validate_rover_position(@position.slice(:x, :y))
                 @position = change_rover_grid_position(rover_position) if @allow_move
             else
                 @error_messages << "Invalid command string #{cmd}"
