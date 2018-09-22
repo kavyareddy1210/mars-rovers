@@ -62,3 +62,8 @@ Rover stops navigating when plateau boundary is reached.
 After cloning repo, change directory to mars-rovers and then run
 
     `ruby init.rb input.txt`
+    
+For running tests, cd into mars-rover and run
+
+     rspec spec
+
