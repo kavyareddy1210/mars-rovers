@@ -63,7 +63,7 @@ After cloning repo, change directory to mars-rovers and then run
 
     ruby init.rb input.txt
     
-For running tests, cd into mars-rover and run
+For running tests, cd into mars-rovers and run
 
      rspec spec
 
